@@ -1,6 +1,6 @@
 # Roblox Developer Toolkit
 
-> An
+> The Roblox Developer Toolkit is free scripting documentation repo for passionate roblox _developers_.
 
 ---
 
