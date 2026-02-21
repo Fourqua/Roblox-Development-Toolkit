@@ -49,8 +49,6 @@ More systems are added regularly. Check back or watch the repo for updates.
 3. Copy the `.lua` file into the correct Roblox Studio service (specified in each README).
 4. Adapt the code to fit your game.
 
-All modules are written in Luau and designed to be readable and easy to modify.
-
 ---
 
 ## Contributing
