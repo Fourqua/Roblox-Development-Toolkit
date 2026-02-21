@@ -26,19 +26,9 @@ roblox-dev-toolkit/
 └── ...more modules added over time
 ```
 
-Every folder is self-contained. You do not need to understand the full toolkit to use one module.
-
----
-
-## Modules
-
-| Module | Description |
-|---|---|
-| `DataStore` | Wrapper for Roblox DataStoreService with auto-retry and session locking |
-| `PlayerManager` | Handles player join/leave lifecycle, data loading, and cleanup |
-| `CombatSystem` | Modular melee and ranged combat framework with hitbox and damage handling |
-
-More systems are added regularly. Check back or watch the repo for updates.
+- Every folder is self-contained. You do not need to understand the full toolkit to use one module.
+- Some folders may contain multiple **files** and/or **folders**
+- More systems are added regularly. Check back or watch the repo for updates.
 
 ---
 
