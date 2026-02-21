@@ -4,7 +4,7 @@
 
 ---
 
-## Structure **(Ex)**
+## Structure - *Ex*
 
 ```
 roblox-dev-toolkit/
