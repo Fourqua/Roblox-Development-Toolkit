@@ -37,7 +37,6 @@ Every folder is self-contained. You do not need to understand the full toolkit t
 | `DataStore` | Wrapper for Roblox DataStoreService with auto-retry and session locking |
 | `PlayerManager` | Handles player join/leave lifecycle, data loading, and cleanup |
 | `CombatSystem` | Modular melee and ranged combat framework with hitbox and damage handling |
-| `UIFramework` | Component-based UI system for building consistent in-game interfaces |
 
 More systems are added regularly. Check back or watch the repo for updates.
 
@@ -56,7 +55,7 @@ All modules are written in Luau and designed to be readable and easy to modify.
 
 ## Contributing
 
-Contributions are welcome. To add a new module or improve an existing one:
+Contributions are insisted. Heres how to add a new module or improve an existing one:
 
 1. Fork the repository
 2. Create a new folder named in `PascalCase`
@@ -72,8 +71,6 @@ Each module's `README.md` should follow this structure:
 
 ```
 # Module Name
-
-One-line description.
 
 ---
 
@@ -92,12 +89,6 @@ At least one working code example.
 ## Notes
 Edge cases, limitations, or anything else worth knowing.
 ```
-
----
-
-## License
-
-This project has no license. All rights are reserved by their respective contributors unless otherwise stated in a specific module folder.
 
 ---
 
