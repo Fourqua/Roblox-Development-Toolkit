@@ -1,52 +1,45 @@
 # FallDamageManager
-
-Fall damage system for Roblox. The higher a player falls from, the more damage they take.
+Fall damage system for Roblox. The faster a player is falling when they land, the more damage they take.
 
 ---
 
 ## Overview
-
-Tracks each player's peak height while in the air. On landing, the script calculates how far they fell and applies a scaled damage. Only falls past a set threshold will damage the player. All tuning is done in the `CONFIG` table at the top of the script.
+This fall damage system tracks the player's downward velocity on landing and applies certain amount of damage based on how fast they were falling. Only falls past a set threshold will damage the player. Tweaks and Tunes can be done in the `CONFIG` table.
 
 ---
 
 ## Setup
-
 1. Place `FallDamageManager.lua` in `ServerScriptService` as a `Script`
-2. Configurate `MinHeight`, `DamagePerStud`, and `MaxDamage` in the `CONFIG` table to fit your games preferences
+2. Configure `MinFallDistance` and `MaxFallDistance` in the `CONFIG` table to fit your game's preferences and likings.
 
 ---
 
 ## Examples
-
-```lua
+​```lua
 -- Intense FPS game
-MinHeight     = 8
-DamagePerStud = 5
-MaxDamage     = 100
+MinFallDistance = 25
+MaxFallDistance = 75
 
--- Casual survival game
-MinHeight     = 25
-DamagePerStud = 1
-MaxDamage     = 50
-```
+-- Calm survival game
+MinFallDistance = 50
+MaxFallDistance = 120
+​```
 
 ---
 
 ## Troubleshooting
-
 **Fall damage isn't triggering**
-Make sure the script is a `Script` inside `ServerScriptService`.
+Make sure the script is a `Script` inside `ServerScriptService`
 
 **Players dying from very short falls**
-Decrease `DamagePerStud` or raise `MinHeight` in the `CONFIG` table.
+Raise `MinFallDistance` in the `CONFIG` table.
 
-**Players take damage on respawn**
-Increase `MinHeight` slightly to give a buffer for the spawn drop.
+**Players taking damage from a normal jump**
+`MinFallDistance` is too low. Try a value around `40` or higher.
 
 ---
 
 ## Notes
-
-- Peak Y axis value resets on each jump so multi-bounce falls are handled correctly
-- Does not interfere with `Humanoid.Health` therefore meaning that low HP players can still be killed by a fall big enough
+- Damage is based on landing velocity, not height. This means falling through the air for longer will hurt me.
+- Instant kill value is controlled by `MaxFallDistance`
+- Does not set `Humanoid.Health` to a fixed value, so low HP players can still be finished off by a smaller fall

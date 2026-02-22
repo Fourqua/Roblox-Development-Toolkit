@@ -1,13 +1,13 @@
-# Roblox Developer Toolkit
+# Roblox Development Toolkit
 
-> The Roblox Developer Toolkit is free scripting documentation repo for passionate roblox _developers_.
+> The Roblox Development Toolkit is free scripting documentation repo for passionate roblox _developers_.
 
 ---
 
 ## Structure - **Ex**
 
 ```
-roblox-dev-toolkit/
+roblox-development-toolkit/
 │
 ├── README.md
 │
@@ -19,7 +19,7 @@ roblox-dev-toolkit/
 │   ├── README.md
 │   └── FallDamageManager.lua
 │
-└── ...more modules added over time
+└── ...more modules will be added overtime
 ```
 
 - Every folder is self-contained. You do not need to understand the full toolkit to use one module.
