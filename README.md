@@ -15,13 +15,13 @@ roblox-dev-toolkit/
 │   ├── README.md
 │   └── DataStore.lua
 │
-├── PlayerManager/
+├── HealthManager/
 │   ├── README.md
-│   └── PlayerManager.lua
+│   └── HealthManager.lua
 │
-├── CombatSystem/
+├── CustomRespawnUI/
 │   ├── README.md
-│   └── CombatSystem.lua
+│   └── CustomRespawnUI.lua
 │
 └── ...more modules added over time
 ```
@@ -36,7 +36,7 @@ roblox-dev-toolkit/
 
 1. Browse the folders and find the system you need.
 2. Read its `README.md` — each one covers setup, the full API, and examples.
-3. Copy the `.luau` file into the correct Roblox Studio service (specified in each README).
+3. Copy the `.lua` file into the correct Roblox Studio service (specified in each README).
 4. Adapt the code to fit your game.
 
 ---
@@ -47,7 +47,7 @@ Contributions are insisted. Heres how to add a new module or improve an existing
 
 1. Fork the repository
 2. Create a new folder named in `PascalCase`
-3. Add your `.luau` source file
+3. Add your `.lua` source file
 4. Add a `README.md` file inside the folder using the format below
 5. Create a pull request with a short description of what the module does
 
