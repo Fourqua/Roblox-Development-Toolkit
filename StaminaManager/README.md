@@ -1,6 +1,6 @@
 # StaminaManager
 
-Sprint system with stamina. Hold shift to sprint. Stamina drains while sprinting and regenerates when you stop
+Sprint system with stamina. Hold shift to sprint. Stamina drains while sprinting and regenerates when you stop.
 
 ---
 
