@@ -70,6 +70,6 @@ The DataStore name may have changed. Make sure `"LeaderstatsData_v1"` hasn't bee
 
 - The stats update on the leaderboard when using `Set` or `Increment`
 - Change `"LeaderstatsData_v1"` to `"LeaderstatsData_v2"` to wipe all stat data and create a new set.
-- Only `IntValue` is used — stats must be whole numbers
+- Only `IntValue` is used. stats must be whole numbers (Integers)
 - Saves automatically on player leave and server shutdown
 - System can be integrated with UI, sounds, etc.
