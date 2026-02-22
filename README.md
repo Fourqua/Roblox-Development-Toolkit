@@ -18,7 +18,15 @@ roblox-development-toolkit/
 ├── FallDamageManager/
 │   ├── README.md
 │   └── FallDamageManager.lua
-│
+|
+├── PlayerLeaderstatsManager/
+│   ├── README.md
+│   └── PlayerLeaderstatsManager.lua
+|
+│├── StaminaManager/
+│   ├── README.md
+│   └── StaminaManager.lua
+|
 └── ...more modules will be added overtime
 ```
 
