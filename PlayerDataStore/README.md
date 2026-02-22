@@ -23,7 +23,7 @@ When a player joins, `loadData` fires and calls `GetAsync` to fetch their saved 
 
 When the player leaves, `saveData` fires and calls `SetAsync` to push the cache back to Roblox. `BindToClose` does the same for all players when the server shuts down.
 
-The `DEFAULT_DATA` table acts as a template. If a player is new, they get a fresh copy of it. If they're returning, their saved values are layered on top — so any new keys you add in the future will automatically appear for existing players too.
+The `DEFAULT_DATA` table acts as a template. When a new player joins, they get a fresh copy of it. If they've already joined and are a returning player, their saved values are layered on top, meaning any new keys you add in the future will automatically appear for existing players too.
 
 ---
 
