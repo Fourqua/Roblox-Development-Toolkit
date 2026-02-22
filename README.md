@@ -71,6 +71,9 @@ Where to place the script and any configuration required.
 ## Examples
 At least one working code example.
 
+## Troubleshooting
+At least one fix to a certain problem
+
 ## Notes
 Edge cases, limitations, or anything else worth knowing.
 ```
