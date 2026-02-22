@@ -68,9 +68,6 @@ What this module does and when to use it.
 ## Setup
 Where to place the script and any configuration required.
 
-## API Reference
-All public functions with parameters and return values.
-
 ## Examples
 At least one working code example.
 
