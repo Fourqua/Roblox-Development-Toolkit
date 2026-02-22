@@ -15,15 +15,17 @@ This fall damage system tracks the player's downward velocity on landing and app
 ---
 
 ## Examples
-​```lua
--- Intense FPS game
+Intense FPS game
+```lua
 MinFallDistance = 25
 MaxFallDistance = 75
+```
 
--- Calm survival game
+Casual survival game
+```lua
 MinFallDistance = 50
 MaxFallDistance = 120
-​```
+```
 
 ---
 
