@@ -1,6 +1,6 @@
 # DataStore
 
-Player data system usuing on Roblox's `DataStoreService`. Loads on join, saves on leave, and server shutdown.
+Player data system using on Roblox's `DataStoreService`. Loads on join, saves on leave, and on a server shutdown.
 
 ---
 
@@ -32,16 +32,16 @@ The `DEFAULT_DATA` table acts as a template. When a new player joins, they get a
 ```lua
 -- Read a value
 local coins = DataStore.Get(player, "Coins")
-print(coins) -- 0 for a new player
+print(coins) -- 0 for new players
 
 -- Set a value directly
 DataStore.Set(player, "Level", 5)
 
--- Add to a number (defaults to +1 if no amount given)
+-- Add to a number (Defaults to +1)
 DataStore.Increment(player, "Coins", 50)
 DataStore.Increment(player, "XP")
 
--- Force save immediately (e.g. after a purchase)
+-- Force save immediately
 DataStore.Save(player)
 ```
 
