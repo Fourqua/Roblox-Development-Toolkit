@@ -17,12 +17,12 @@ While the player holds shift and is moving, the players stamina drains and speed
 
 ```lua
 local CONFIG = {
-	WalkSpeed   = 16,  -- Normal speed
-	SprintSpeed = 28,  -- Speed while sprinting
-	MaxStamina  = 100, -- Stamina pool size
-	DrainRate   = 20,  -- Stamina lost per second while sprinting
-	RegenRate   = 10,  -- Stamina regained per second while not sprinting
-	RegenDelay  = 1,   -- Seconds before regen starts after stopping
+	WalkSpeed    = 16,  -- default movement speed
+	SprintSpeed  = 28,  -- speed while sprinting
+	MaxStamina   = 100, -- max stamina
+	DrainRate    = 20,  -- stamina lost per second while sprinting
+	RegenRate    = 10,  -- stamina regained per second while not sprinting
+	RegenDelay   = 1,   -- seconds after stopping sprint before regen kicks in
 }
 ```
 
@@ -36,7 +36,7 @@ DrainRate  = 35
 RegenRate  = 8
 RegenDelay = 2
 
--- Light stamina system
+-- Slow drain, fast regen.
 DrainRate  = 10
 RegenRate  = 20
 RegenDelay = 0.5
