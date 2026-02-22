@@ -43,9 +43,9 @@ Contributions are insisted. Heres how to add a new module or improve an existing
 
 1. Fork the repository
 2. Create a new folder named in `PascalCase`
-3. Add your `.lua` source file
+3. Add your `.lua` file
 4. Add a `README.md` file inside the folder using the format below
-5. Create a pull request with a short description of what the module does
+5. Create a pull request with a short description of what the script does
 
 Please make sure your code is clean and your documentation is complete before submitting.
 
