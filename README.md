@@ -15,13 +15,9 @@ roblox-dev-toolkit/
 │   ├── README.md
 │   └── DataStore.lua
 │
-├── HealthManager/
+├── FallDamageManager/
 │   ├── README.md
-│   └── HealthManager.lua
-│
-├── CustomRespawnUI/
-│   ├── README.md
-│   └── CustomRespawnUI.lua
+│   └── FallDamageManager.lua
 │
 └── ...more modules added over time
 ```
