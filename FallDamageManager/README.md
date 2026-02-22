@@ -30,13 +30,13 @@ MaxFallDistance = 120
 ---
 
 ## Troubleshooting
-**Fall damage isn't triggering**
+**Fall damage isn't triggering** - 
 Make sure the script is a `Script` inside `ServerScriptService`
 
-**Players dying from very short falls**
+**Players dying from very short falls** - 
 Raise `MinFallDistance` in the `CONFIG` table.
 
-**Players taking damage from a normal jump**
+**Players taking damage from a normal jump** - 
 `MinFallDistance` is too low. Try a value around `40` or higher.
 
 ---

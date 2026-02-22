@@ -71,16 +71,16 @@ Existing players will automatically receive the new keys with their default valu
 
 ## Troubleshooting
 
-**Data isn't saving in Studio**
+**Data isn't saving in Studio** - 
 Make sure **Enable Studio Access to API Services** is turned on in `Game Settings → Security`. Without it, all DataStore calls silently fail.
 
-**Player data loads as all defaults every time**
+**Player data loads as all defaults every time** - 
 The DataStore name may have changed, or the `GetAsync` call is failing silently. Check the output for any `[DataStore] Failed` warnings.
 
-**A new key I added isn't showing up for existing players**
+**A new key I added isn't showing up for existing players** - 
 Make sure the key exists in `DEFAULT_DATA`. The merge loop only fills in keys that are defined there — if it's missing from defaults, it won't be added to returning players' data.
 
-**`Increment` isn't working**
+**`Increment` isn't working** - 
 The key you're incrementing must be a number in `DEFAULT_DATA`. Calling `Increment` on a string or table key will silently do nothing.
 
 ---
