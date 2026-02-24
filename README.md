@@ -61,13 +61,13 @@ roblox-development-toolkit/
 
 Contributions are insisted. Heres how to add a new module or improve an existing one:
 
-1. Fork the repository
+1. Fork this repository
 2. Create a new folder named in `PascalCase`
 3. Add your `.lua` file
 4. Add a `README.md` file inside the folder using the format below
 5. Create a pull request with a short description of what the script does
 
-Please make sure your code is clean and your documentation is complete before submitting.
+Please make sure your code is clean and your documentation is complete before submitting your pr.
 
 ### Module README Format
 
