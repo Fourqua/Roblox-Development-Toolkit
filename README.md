@@ -11,21 +11,33 @@ roblox-development-toolkit/
 │
 ├── README.md
 │
-├── DataStore/
+├── ChatTags/
 │   ├── README.md
-│   └── DataStore.lua
+│   └── ChatTags.lua
 │
+├── DayNightCycle/
+│   ├── README.md
+│   └── DayNightCycle.lua
+|
 ├── FallDamageManager/
 │   ├── README.md
 │   └── FallDamageManager.lua
 |
-├── PlayerLeaderstatsManager/
+│├── PlayerDataStore/
 │   ├── README.md
-│   └── PlayerLeaderstatsManager.lua
+│   └── PlayerDataStore.lua
+|
+│├── PlayerStatsManager/
+│   ├── README.md
+│   └── PlayerStatsManager.lua
 |
 │├── StaminaManager/
 │   ├── README.md
 │   └── StaminaManager.lua
+|
+│├── WeatherSystem/
+│   ├── README.md
+│   └── WeatherSystem.lua
 |
 └── ...more modules will be added overtime
 ```
