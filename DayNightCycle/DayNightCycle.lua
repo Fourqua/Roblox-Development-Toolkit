@@ -4,7 +4,7 @@ local RunService = game:GetService("RunService")
 
 -- CONFIG: Change these to your liking.
 local CONFIG = {
-	DayLength = 240, -- length of a full day/night cycle in real seconds
+	DayLength = 240, -- length of a full day/night cycle in seconds
 	StartTime = 8,   -- hour the server starts at (0-24 hours)
 }
 
