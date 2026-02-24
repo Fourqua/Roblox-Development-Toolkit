@@ -27,16 +27,16 @@ local CONFIG = {
 ## Examples
 
 ```lua
--- Fast cycle for a dynamic feel
+-- Fast cycle
 DayLength = 60
 
--- Slow, almost real-time cycle
+-- Slow cycle
 DayLength = 1200
 
--- Start at midnight
+-- Starts at midnight
 StartTime = 0
 
--- Start at sunset
+-- Starts at sunset
 StartTime = 18
 ```
 
@@ -44,19 +44,19 @@ StartTime = 18
 
 ## Troubleshooting
 
-**Time isn't changing**
-Make sure the script is a regular `Script` in `ServerScriptService`, not a `LocalScript`.
+**Time isn't changing** - 
+Make sure the script is a regular `Script` in `ServerScriptService` (MAKE SURE IT IS **NOT** a `LocalScript`)
 
-**Sky looks wrong at certain times**
-Roblox's default sky handles lighting automatically. If you have a custom `Sky` object in `Lighting`, make sure it's set up correctly for day and night transitions.
+**Sky looks wrong at certain times** - 
+Roblox's default sky handles lighting automatically. If you have a custom `Sky` object in `Lighting` make sure that it's set up correctly for day and night cycles.
 
-**Cycle is too fast or too slow**
-Increase `DayLength` to slow it down, decrease it to speed it up. The value is in real-world seconds.
+**Cycle is too fast or too slow** - 
+Increase `DayLength` to slow it down, decrease it to speed it up.
 
 ---
 
 ## Notes
 
-- No dependencies — drop it in and it works
-- All players see the same time since it runs on the server
-- Works with Roblox's built-in atmosphere and sky automatically
+- No dependencies. Paste in the code and it works.
+- All players see the same time since it runs on the server.
+- Works with Roblox's built in atmosphere and sky.
