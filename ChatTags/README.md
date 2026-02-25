@@ -23,7 +23,7 @@ local ROLES = {
 }
 ```
 
-To find a UserId, go to `roblox.com/users/USERNAME/profile` — the number in the URL is the UserId.
+To find a UserId, go to `roblox.com/users/USERNAME/profile` — The big string of numbers is the user ID
 
 ---
 
@@ -31,11 +31,11 @@ To find a UserId, go to `roblox.com/users/USERNAME/profile` — the number in th
 
 ```lua
 -- Multiple admins
-Admins = { 111111111, 222222222, 333333333 },
+Admins = { 123123123123, 123123123124, 123123123125 },
 
 -- Custom tag text and color
-Owner = { Text = "[👑 Owner]", Color = Color3.fromRGB(255, 215, 0)   },
-Mod   = { Text = "[🛡 Mod]",   Color = Color3.fromRGB(100, 180, 255) },
+Owner = { Text = "[Owner]", Color = Color3.fromRGB(255, 215, 0)   },
+Mod   = { Text = "[Mod]",   Color = Color3.fromRGB(100, 180, 255) },
 ```
 
 ---
