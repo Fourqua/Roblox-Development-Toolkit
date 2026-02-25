@@ -1,3 +1,5 @@
+-- LOCAL SCRIPT!
+-- Doesn't use Legacy Chat because Roblox got rid of it
 local Players = game:GetService("Players")
 local TextChatService = game:GetService("TextChatService")
 
@@ -70,3 +72,5 @@ TextChatService.OnIncomingMessage = function(message)
 
 	return properties
 end
+
+-- :)
