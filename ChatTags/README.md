@@ -1,12 +1,12 @@
 # ChatTags
 
-Displays colored role tags in chat for Owners, Admins, and Mods. Tags appear before the player's name whenever they send a message.
+Displays rank tags in chat for Owners, Admins, and Mods. Tags appear before the player's name whenever they send a message in the roblox chat.
 
 ---
 
 ## Overview
 
-Uses Roblox's `TextChatService` and `OnIncomingMessage` to prepend a colored tag to matching players' chat messages. Runs on the client since `OnIncomingMessage` is client-side only. Role checks are done by `UserId` so tags can't be faked by username changes.
+This system uses Roblox's `TextChatService` and `OnIncomingMessage` to prepend a colored tag to match players' chat messages. This runs on the client since `OnIncomingMessage` is client- ide only. Role checks are done by `UserId`. Roblox's `LegacyChatService` got removed in mid 2025 which is why this system uses `TextChatService` rather than `LegacyChatService`.
 
 ---
 
