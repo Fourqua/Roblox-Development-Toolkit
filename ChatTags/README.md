@@ -18,12 +18,12 @@ Uses Roblox's `TextChatService` and `OnIncomingMessage` to prepend a colored tag
 ```lua
 local ROLES = {
 	Owners = { 123456789 },  -- your UserId here
-	Admins = { 987654321 },
-	Mods   = { 111222333, 444555666 },
+	Admins = { 987654321 }, -- or here
+	Mods   = { 111222333, 444555666 }, -- or here
 }
 ```
 
-To find a UserId, go to `roblox.com/users/USERNAME/profile` — The big string of numbers is the user ID
+To find a UserId, go to `roblox.com/users/USERNAME/profile`. The big string of numbers is the user ID
 
 ---
 
@@ -32,6 +32,8 @@ To find a UserId, go to `roblox.com/users/USERNAME/profile` — The big string o
 ```lua
 -- Multiple admins
 Admins = { 123123123123, 123123123124, 123123123125 },
+-- Multiple mods
+Mod = { 123123123123, 123123123124, 123123123125 },
 
 -- Custom tag text and color
 Owner = { Text = "[Owner]", Color = Color3.fromRGB(255, 215, 0)   },
@@ -55,5 +57,5 @@ Check the UserId. Print `player.UserId` in the output when that player joins to 
 
 ## Notes
 
-- Since this runs client-side, the `ROLES` table is visible to exploiters — tags are visual only and should not be used for permission checks. Do permission logic server-side separately
-- A player can only have one tag — Owner is checked first, then Admin, then Mod
+- This runs on the client, meaning the `ROLES` table is visible to hackers. Tags are visual only and should not be used for permission checks. Permission logic should be done seperatly and securly.
+- A player can only have one tag . Owner gets first priority, then Admin, then Mod (then any other rank you add)
