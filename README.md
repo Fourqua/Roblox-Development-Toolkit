@@ -10,7 +10,11 @@
 roblox-development-toolkit/
 │
 ├── README.md
-│
+|
+│── BanAndKickSystem/
+│   ├── README.md
+│   └── BanAndKickSystem.lua
+|
 ├── ChatTags/
 │   ├── README.md
 │   └── ChatTags.lua
@@ -23,21 +27,17 @@ roblox-development-toolkit/
 │   ├── README.md
 │   └── FallDamageManager.lua
 |
-│├── PlayerDataStore/
+│── PlayerDataStore/
 │   ├── README.md
 │   └── PlayerDataStore.lua
 |
-│├── PlayerStatsManager/
+│── PlayerStatsManager/
 │   ├── README.md
 │   └── PlayerStatsManager.lua
 |
-│├── StaminaManager/
+│── StaminaManager/
 │   ├── README.md
 │   └── StaminaManager.lua
-|
-│├── WeatherSystem/
-│   ├── README.md
-│   └── WeatherSystem.lua
 |
 └── ...more modules will be added overtime
 ```
