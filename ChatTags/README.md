@@ -42,14 +42,14 @@ Mod   = { Text = "[Mod]",   Color = Color3.fromRGB(100, 180, 255) },
 
 ## Troubleshooting
 
-**Tags aren't showing**
-Make sure the script is a `LocalScript` inside `StarterPlayerScripts`. It will not work as a regular `Script`.
+**The tags aren't showing** - 
+Make sure the script is a `LocalScript` inside `StarterPlayerScripts`. This is important as it will not work if it's a `Script`.
 
-**Error about OnIncomingMessage being client only**
-You placed it in `ServerScriptService` — move it to `StarterPlayerScripts`.
+**Error about OnIncomingMessage being client only** - 
+You placed it in `ServerScriptService`. move it to `StarterPlayer` -> `StarterPlayerScripts`.
 
-**Tag shows for the wrong player**
-Double check the UserId. You can verify it by printing `player.UserId` in the output when that player joins.
+**Tag shows for the wrong player** - 
+Check the UserId. Print `player.UserId` in the output when that player joins to verify.
 
 ---
 
@@ -57,4 +57,3 @@ Double check the UserId. You can verify it by printing `player.UserId` in the ou
 
 - Since this runs client-side, the `ROLES` table is visible to exploiters — tags are visual only and should not be used for permission checks. Do permission logic server-side separately
 - A player can only have one tag — Owner is checked first, then Admin, then Mod
-- Emoji in tag text is supported on most platforms
