@@ -16,7 +16,7 @@ There are two scripts: a server script that handles all the logic. A client scri
    - `CommandEvent`
    - `ResponseEvent`
 
-2. Place `BanKickServer.lua` in `ServerScriptService` as a `Script`.
+2. Place `BanKickManager.lua` in `ServerScriptService` as a `Script`.
 
 3. Place `BanKickClient.lua` in `StarterPlayerScripts` as a `LocalScript`.
 
@@ -66,7 +66,7 @@ Make sure two `RemoteEvent` objects exist in `ReplicatedStorage` exactly named `
 Your UserId isn't in the `AUTHORIZED` table in the `BanKickServerlua`. Make sure to add it there.
 
 **Banned player can still join** - 
-Make sure `BanKickServer.lua` is a `Script` in `ServerScriptService`. The ban check on join only runs server side.
+Make sure `BanKickManager.lua` is a `Script` in `ServerScriptService`. The ban check on join only runs server side.
 
 **Unban requires UserId not username** - 
 Use their UserId directly with `/unban`.
