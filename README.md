@@ -11,9 +11,10 @@ roblox-development-toolkit/
 │
 ├── README.md
 |
-│── BanAndKickSystem/
+│── BanKickManager/
 │   ├── README.md
-│   └── BanAndKickSystem.lua
+│   |── BanKickManager.lua
+|   └── BanKickClient.lua
 |
 ├── ChatTags/
 │   ├── README.md
