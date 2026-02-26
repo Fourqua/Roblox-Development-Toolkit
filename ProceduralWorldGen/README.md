@@ -1,19 +1,19 @@
 # ProceduralWorldGenerator
 
-Infinite smooth terrain generation using Perlin noise. Chunks load around players and unload when out of range. Fully modular — biomes, weather, and objects are all defined in simple tables you can extend without touching the core logic.
+Infinite terrain generation. Chunks load around players and unload when out of range. This system is compatible with biomes, weather, and objects. They are all defined in simple tables you can extend without touching the main logic.
 
 ---
 
 ## Overview
 
-The world is split into chunks. As players move, nearby chunks generate using `Terrain:FillBlock` for true smooth Roblox terrain. Height is determined by two layers of Perlin noise for a natural feel. The height at each point picks a biome which sets the terrain material. Water fills any area below the water level. Weather cycles randomly on a timer by adjusting `Lighting` properties. Objects can be dropped into the `OBJECTS` table and will spawn on valid surfaces automatically.
+The world is split into chunks, kinda like minecraft. As players move, nearby chunks generate using `Terrain:FillBlock` for true Roblox terrain. Height is determined by two layers of Perlin noise for a natural feel. The height at each point picks a biome which sets the terrain material. Water fills any area below the water level. Weather cycles randomly on a timer by adjusting `Lighting` properties. Objects can be dropped into the `OBJECTS` table and will spawn on surfaces automatically.
 
 ---
 
 ## Setup
 
-1. Place `ProceduralWorldGenerator.lua` in `ServerScriptService` as a `Script`
-2. Tune `CONFIG` at the top:
+1. Place `ProceduralWorldGenerator.lua` in the `ServerScriptService` as a `Script`.
+2. Tweak `CONFIG` at the top to your liking:
 
 ```lua
 local CONFIG = {
@@ -32,7 +32,7 @@ local CONFIG = {
 
 ## Adding Biomes
 
-Add a new entry to the `BIOMES` table. Biomes are selected by height — the last one whose `MinHeight` the terrain clears wins:
+Add a new entry to the `BIOMES` table. Biomes are selected by height. The last one whose `MinHeight` the terrain clears wins
 
 ```lua
 {
@@ -47,7 +47,7 @@ Add a new entry to the `BIOMES` table. Biomes are selected by height — the las
 
 ## Adding Weather
 
-Add a new entry to the `WEATHER` table. The `Apply` function runs when this weather is selected:
+Add a new entry to the `WEATHER` table. The `Apply` function runs when this weather is selected
 
 ```lua
 {
@@ -66,7 +66,7 @@ Add a new entry to the `WEATHER` table. The `Apply` function runs when this weat
 
 ## Adding Objects
 
-Add a new entry to the `OBJECTS` table. The `Spawn` function receives the world `x`, `y` (surface + 2), and `z` position and must return a `Model` or `Part`:
+Add a new entry to the `OBJECTS` table. The `Spawn` function receives the world `x`, `y` (surface + 2), and `z` position and must return a `Model` or `Part`
 
 ```lua
 {
@@ -88,23 +88,23 @@ Add a new entry to the `OBJECTS` table. The `Spawn` function receives the world 
 
 ## Troubleshooting
 
-**Game is lagging**
-Lower `RenderDistance` or raise the `step` variable inside `generateChunk`. Less resolution = faster generation.
+**Game is lagging** - 
+Lower the `RenderDistance` or raise the `step` variable inside `generateChunk`.
 
-**Terrain looks too flat or too spiky**
-Raise `HeightScale` for more dramatic terrain. Adjust `NoiseScale` — lower is smoother, higher is more chaotic.
+**Terrain looks too flat or too spiky** - 
+Raise `HeightScale` for more dramatic terrain. Adjust `NoiseScale`. The lower is smoother, higher is more chaotic.
 
-**Objects spawning underwater**
+**Objects spawning underwater** - 
 Set `MinHeight` on the object above `CONFIG.WaterLevel`. Example: `MinHeight = CONFIG.WaterLevel + 3`.
 
-**Same world every run**
-Change `Seed` to `math.random(1, 999999)`. Fix it to a number if you want a consistent world.
+**Same world every run** - 
+Change `Seed` to `math.random(1, 999999)`.
 
 ---
 
 ## Notes
 
-- All generated chunks live under a `GeneratedChunks` folder in Workspace
-- Fix `Seed` to a specific number to get the same world every server start
-- Weather is purely visual — tie it to gameplay by reading `Lighting.FogEnd` or adding a `CurrentWeather` variable
-- Only one object spawns per terrain sample point — the first one that passes its chance check wins
+- All generated chunks live under a `GeneratedChunks` folder in the `Workspace`.
+- Fix the `Seed` to a specific number to get the same world every server start.
+- Weather is purely visual. Tie it to gameplay by reading `Lighting.FogEnd` or adding a `CurrentWeather` variable.
+- This system is modular. You can easily add or change anything that fits into your game.
