@@ -28,6 +28,10 @@ roblox-development-toolkit/
 │   ├── README.md
 │   └── FallDamageManager.lua
 |
+│── HealthBar/
+│   ├── README.md
+│   └── HealthBar.lua
+|
 │── PlayerDataStore/
 │   ├── README.md
 │   └── PlayerDataStore.lua
