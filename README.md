@@ -44,6 +44,10 @@ roblox-development-toolkit/
 │   ├── README.md
 │   └── ProceduralWorldGen.lua
 |
+|── RenderDistanceManager/
+│   ├── README.md
+│   └── RenderDistanceManager.lua
+|
 │── StaminaManager/
 │   ├── README.md
 │   └── StaminaManager.lua
