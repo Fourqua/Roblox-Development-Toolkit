@@ -1,19 +1,19 @@
 # HealthBar
 
-A simple HUD health bar with health numbers. Sits at the bottom center of the screen, animates on damage and healing, and shifts from green to red as health drops.
+A simple HUD health bar with health numbers. Shifts from green to red as health drops.
 
 ---
 
 ## Overview
 
-Builds a `ScreenGui` directly in the player's `PlayerGui` at runtime — no UI setup needed in Studio. The fill bar animates smoothly using `TweenService` and lerps between green and red based on health percentage. The health number updates every time health changes.
+Builds a `ScreenGui` in the player's `PlayerGui` at runtime. The fill bar animates smoothly using `TweenService` and lerps between green and red based on health percentage. The health number updates every time health changes.
 
 ---
 
 ## Setup
 
-1. Place `HealthBar.lua` in `StarterPlayerScripts` as a `LocalScript`
-2. Adjust `CONFIG` at the top to match your game's style:
+1. Place `HealthBar.lua` in the `StarterPlayerScripts` as a `LocalScript`.
+2. Adjust `CONFIG` at the top to your liking:
 
 ```lua
 local CONFIG = {
@@ -42,19 +42,19 @@ LowColor     = Color3.fromRGB(180, 40, 200)
 
 ## Troubleshooting
 
-**Bar isn't showing**
-Make sure the script is a `LocalScript` in `StarterPlayerScripts`, not a regular `Script`.
+**Bar isn't showing** - 
+Make sure the script is a `LocalScript` in `StarterPlayerScripts`. It cannot be a regular `Script` or `ModuleScript`.
 
-**Two health bars showing**
+**Two health bars showing** - 
 Roblox has a default health bar built in. Go to `StarterGui` and delete or disable the default `Health` ScreenGui.
 
-**Bar doesn't reset on respawn**
-The script reconnects automatically on `CharacterAdded` — make sure `ResetOnSpawn` hasn't been changed elsewhere.
+**Bar doesn't reset on respawn** - 
+The script reconnects automatically on `CharacterAdded`. Make sure `ResetOnSpawn` hasn't been changed somewhere else.
 
 ---
 
 ## Notes
 
-- No dependencies — drop it in and it works
-- Works with any `MaxHealth` value, not just 100
-- Automatically reconnects on respawn
+- Drop it in and it works. No dependencies.
+- Works with any `MaxHealth` value, not just 100.
+- Automatically reconnects on respawn.
