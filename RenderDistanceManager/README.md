@@ -58,7 +58,6 @@ Increase `CheckInterval` to reduce how often checks run, or increase `RenderDist
 
 ## Notes
 
-- Runs client-side — each player has their own independent render distance
-- Character parts for all players are always excluded
-- Uses squared distance comparison to avoid expensive `math.sqrt` calls every frame
-- Parts are hidden visually only — they still exist physically and can still collide
+- Script runs client-side. each player has their own render distance.
+- Uses squared distance comparison to avoid expensive `math.sqrt` calls every frame.
+- Parts are hidden visually only. They still exist physically and can still collide.
