@@ -32,6 +32,10 @@ roblox-development-toolkit/
 │   ├── README.md
 │   └── HealthBar.lua
 |
+|── ItemGiver/
+│   ├── README.md
+│   └── ItemGiver.lua
+|
 │── PlayerDataStore/
 │   ├── README.md
 │   └── PlayerDataStore.lua
