@@ -45,14 +45,14 @@ CheckInterval  = 0.1
 
 ## Troubleshooting
 
-**Parts are flickering**
-Increase `CheckInterval` slightly. Flickering usually means the part is right on the edge of the render distance and toggling every frame.
+**Parts are flickering** - 
+Increase `CheckInterval`. Flickering usually means the part is right on the edge of the render distance and toggling every frame.
 
-**Player characters are disappearing**
+**Player characters are disappearing** - 
 The script excludes character parts automatically. If it's still happening, make sure the characters are properly parented under `Players` and not directly in `Workspace` as a custom setup.
 
-**Performance is poor in large maps**
-Increase `CheckInterval` to reduce how often checks run, or increase `RenderDistance` so fewer parts are toggling per cycle.
+**Performance is poor in large maps** - 
+Increase `CheckInterval` to reduce how often checks run, or increase `RenderDistance` so fewer parts are toggling.
 
 ---
 
