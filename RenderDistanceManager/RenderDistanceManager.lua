@@ -3,23 +3,16 @@ local RunService = game:GetService("RunService")
 
 local player = Players.LocalPlayer
 
--- ============================================================
--- CONFIG
--- ============================================================
-
+-- CONFIG - Adjust these to your liking
 local CONFIG = {
-	RenderDistance  = 300,  -- Studs — parts beyond this are hidden
-	CheckInterval   = 0.5,  -- Seconds between distance checks (lower = more accurate, more costly)
+	RenderDistance  = 300,  -- Parts beyond this are hidden
+	CheckInterval   = 0.5,  -- Seconds between distance checks
 	FadeEnabled     = true, -- Smoothly fade parts in/out instead of popping
 	FadeTime        = 0.3,  -- Seconds to fade in/out
 }
 
--- ============================================================
 -- INTERNALS
--- ============================================================
-
 -- Collect all parts in the workspace that should be managed
--- Parts inside players' characters are excluded automatically
 local function getManagedParts()
 	local parts = {}
 	for _, obj in ipairs(workspace:GetDescendants()) do
@@ -44,7 +37,6 @@ local function setVisibility(part, visible)
 	if CONFIG.FadeEnabled then
 		-- Tween transparency
 		local target = visible and 0 or 1
-		-- Only tween if it actually needs to change
 		if math.abs(part.Transparency - target) < 0.01 then return end
 		part.Transparency = target
 	else
@@ -52,10 +44,7 @@ local function setVisibility(part, visible)
 	end
 end
 
--- ============================================================
 -- MAIN LOOP
--- ============================================================
-
 local elapsed = 0
 
 RunService.Heartbeat:Connect(function(dt)
