@@ -6,14 +6,14 @@ Hides parts and models that are beyond a certain distance from the player. Runs 
 
 ## Overview
 
-Every `CheckInterval` seconds, the script measures the distance from the player's `HumanoidRootPart` to every managed part in the workspace. Parts beyond `RenderDistance` studs are hidden, and parts within range are shown. Character parts for all players are excluded automatically.
+Every `CheckInterval` seconds, the script measures the distance from the player's `HumanoidRootPart` to every managed part in the workspace. Parts beyond `RenderDistance` studs are hidden, and parts within range are shown. Character parts for all players are excluded.
 
 ---
 
 ## Setup
 
 1. Place `RenderDistance.lua` in the `StarterPlayerScripts` as a `LocalScript`.
-2. Adjust `CONFIG` at the top:
+2. Adjust `CONFIG` settings at the top:
 
 ```lua
 local CONFIG = {
@@ -29,15 +29,15 @@ local CONFIG = {
 ## Examples
 
 ```lua
--- Tight render distance for a horror/fog game
+-- Tight render distance
 RenderDistance = 80
 FadeEnabled    = true
 
--- Large open world, instant pop
+-- Instant pop
 RenderDistance = 600
 FadeEnabled    = false
 
--- Frequent checks for fast-moving players
+-- Frequent checks for fast players
 CheckInterval  = 0.1
 ```
 
