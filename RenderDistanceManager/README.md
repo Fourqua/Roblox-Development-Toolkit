@@ -1,6 +1,6 @@
 # RenderDistance
 
-Hides parts and models that are beyond a set distance from the player. Runs client-side so each player manages their own view. Supports smooth fading or instant pop.
+Hides parts and models that are beyond a certain distance from the player. Runs client side so each player manages their own view.
 
 ---
 
