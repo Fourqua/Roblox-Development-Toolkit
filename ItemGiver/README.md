@@ -36,8 +36,8 @@ local AUTHORIZED = {
 
 ```
 /give PlayerName Sword
-/give PlayerName FireballWand
-/give Fourqua HealthPotion
+/give PlayerName Fireball
+/give Fourqua Knife
 ```
 
 ---
