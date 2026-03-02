@@ -1,12 +1,12 @@
 # ItemGiver
 
-Give tools from `ServerStorage` to any player's backpack using a chat command. Only authorized players can use it.
+Give tools from `ServerStorage` to any player's backpack using a chat command.
 
 ---
 
 ## Overview
 
-Authorized players type `/give <player> <item>` in chat. The client script detects the command and fires it to the server. The server validates the sender, finds the target player, clones the tool from `ServerStorage`, and drops it into their `Backpack`. Feedback is sent back as a system message visible only to the sender.
+Authorized players type `/give <player> <item>` in chat. The client script detects the command and fires it to the server. The server identifies and validates the sender, finds the player, clones the tool from `ServerStorage`, and drops it into their `Backpack` / `Inventory`.
 
 ---
 
