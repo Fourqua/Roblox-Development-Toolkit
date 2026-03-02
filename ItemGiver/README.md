@@ -60,6 +60,6 @@ Double check your UserId in the `AUTHORIZED` table. Find it at `roblox.com/users
 
 ## Notes
 
-- Tools are cloned from `ServerStorage` so the original is never removed
-- Authorization is checked server-side — clients cannot fake the command
-- Item name matching is case-insensitive so `/give Player sword` and `/give Player Sword` both work
+- Tools are cloned from `ServerStorage`. Can be changed to something like the `ReplicatedStorage`.
+- Authorization is checked on the server so that clients cannot fake the command.
+- Item name matching is case insensitive so `/give Fourqua sword` and `/give Fourqua Sword` both work.
