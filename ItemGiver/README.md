@@ -12,13 +12,13 @@ Authorized players type `/give <player> <item>` in chat. The client script detec
 
 ## Setup
 
-1. In `ReplicatedStorage`, create two `RemoteEvent` objects named exactly:
+1. In `ReplicatedStorage`, create two `RemoteEvent` objects named:
    - `GiveCommandEvent`
    - `GiveResponseEvent`
 
-2. Place `ItemGiver_Server.lua` in `ServerScriptService` as a `Script`
+2. Place `ItemGiver.lua` in the `ServerScriptService` as a `Script`
 
-3. Place `ItemGiver_Client.lua` in `StarterPlayerScripts` as a `LocalScript`
+3. Place `ItemGiverClient.lua` in the `StarterPlayerScripts` as a `LocalScript`
 
 4. Add your UserId to `AUTHORIZED` in the server script:
 
