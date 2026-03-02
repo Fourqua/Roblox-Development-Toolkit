@@ -44,16 +44,16 @@ local AUTHORIZED = {
 
 ## Troubleshooting
 
-**"Item not found in ServerStorage"**
+**"Item not found in ServerStorage"** - 
 Make sure the tool is a direct child of `ServerStorage`, not inside a folder. The name must match the tool's actual name in Studio.
 
-**"Player not found"**
+**"Player not found"** - 
 The script does a partial name match — make sure you're spelling enough of the name to uniquely identify them.
 
-**Command fires but nothing happens**
+**Command fires but nothing happens** - 
 Check that both `RemoteEvent` objects exist in `ReplicatedStorage` with the exact names `GiveCommandEvent` and `GiveResponseEvent`.
 
-**Unauthorized message even though it's me**
+**Unauthorized message even though it's me** - 
 Double check your UserId in the `AUTHORIZED` table. Find it at `roblox.com/users/USERNAME/profile`.
 
 ---
