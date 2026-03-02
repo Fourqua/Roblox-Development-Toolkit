@@ -24,11 +24,11 @@ Authorized players type `/give <player> <item>` in chat. The client script detec
 
 ```lua
 local AUTHORIZED = {
-	123456789,
+	1234567890,
 }
 ```
 
-5. Place your tools directly inside `ServerStorage` — the item name in the command must match the tool's name exactly (case-insensitive)
+5. Place your tools inside `ServerStorage`. The item name in the command must match the tool's name exactly.
 
 ---
 
