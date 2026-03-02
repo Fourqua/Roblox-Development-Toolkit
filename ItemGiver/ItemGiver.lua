@@ -3,18 +3,13 @@ local Players          = game:GetService("Players")
 local ServerStorage    = game:GetService("ServerStorage")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Add authorized UserIds here
 local AUTHORIZED = {
-	123456789, -- replace with your UserId
+	123828372, -- replace with your UserId
 }
 
--- RemoteEvents (create these in ReplicatedStorage)
--- GiveCommandEvent  : LocalScript → Server
--- GiveResponseEvent : Server → LocalScript
+-- RemoteEvents
 local GiveCommandEvent  = ReplicatedStorage:WaitForChild("GiveCommandEvent")
 local GiveResponseEvent = ReplicatedStorage:WaitForChild("GiveResponseEvent")
-
--- ============================================================
 
 local function isAuthorized(player)
 	for _, id in ipairs(AUTHORIZED) do
@@ -23,7 +18,7 @@ local function isAuthorized(player)
 	return false
 end
 
--- Case-insensitive partial player name search
+-- case insensitive partial player name search
 local function findPlayer(name)
 	local lower = name:lower()
 	for _, p in ipairs(Players:GetPlayers()) do
@@ -34,7 +29,7 @@ local function findPlayer(name)
 	return nil
 end
 
--- Find a tool in ServerStorage by name (case-insensitive)
+-- Find a tool in ServerStorage by name
 local function findItem(name)
 	local lower = name:lower()
 	for _, obj in ipairs(ServerStorage:GetChildren()) do
@@ -45,28 +40,26 @@ local function findItem(name)
 	return nil
 end
 
--- ============================================================
-
 GiveCommandEvent.OnServerEvent:Connect(function(sender, targetName, itemName)
 	if not isAuthorized(sender) then
-		GiveResponseEvent:FireClient(sender, "❌ You are not authorized to use /give.")
+		GiveResponseEvent:FireClient(sender, "You are not authorized to use /give.")
 		return
 	end
 
 	if not targetName or not itemName then
-		GiveResponseEvent:FireClient(sender, "❌ Usage: /give <player> <item>")
+		GiveResponseEvent:FireClient(sender, "Usage: /give <player> <item>")
 		return
 	end
 
 	local target = findPlayer(targetName)
 	if not target then
-		GiveResponseEvent:FireClient(sender, "❌ Player not found: " .. targetName)
+		GiveResponseEvent:FireClient(sender, "Player not found: " .. targetName)
 		return
 	end
 
 	local item = findItem(itemName)
 	if not item then
-		GiveResponseEvent:FireClient(sender, "❌ Item not found in ServerStorage: " .. itemName)
+		GiveResponseEvent:FireClient(sender, "Item not found in ServerStorage: " .. itemName)
 		return
 	end
 
@@ -74,5 +67,5 @@ GiveCommandEvent.OnServerEvent:Connect(function(sender, targetName, itemName)
 	local clone = item:Clone()
 	clone.Parent = target.Backpack
 
-	GiveResponseEvent:FireClient(sender, "✅ Gave " .. item.Name .. " to " .. target.Name)
+	GiveResponseEvent:FireClient(sender, "Gave " .. item.Name .. " to " .. target.Name)
 end)

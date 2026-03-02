@@ -5,10 +5,11 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local player = Players.LocalPlayer
 
+-- Remote Events
 local GiveCommandEvent  = ReplicatedStorage:WaitForChild("GiveCommandEvent")
 local GiveResponseEvent = ReplicatedStorage:WaitForChild("GiveResponseEvent")
 
--- Listen for /give typed in the general chat channel
+-- Listen for /give typed in the chat 
 local TextChannel = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXGeneral")
 
 TextChannel.OnIncomingMessage = function(message)
@@ -19,7 +20,7 @@ TextChannel.OnIncomingMessage = function(message)
 
 	local text = message.Text
 
-	-- Match /give <player> <item>
+	-- Match the command /give <player> <item>
 	if text:lower():sub(1, 5) == "/give" then
 		local args = {}
 		for word in text:sub(7):gmatch("%S+") do
@@ -31,14 +32,14 @@ TextChannel.OnIncomingMessage = function(message)
 
 		GiveCommandEvent:FireServer(targetName, itemName)
 
-		-- Hide the command from chat
+		-- Hide the command from the chat
 		properties.Text = ""
 	end
 
 	return properties
 end
 
--- Show server response as a system message
+-- Show server response as a message
 GiveResponseEvent.OnClientEvent:Connect(function(msg)
 	local systemChannel = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXSystem")
 	systemChannel:DisplaySystemMessage(msg)
