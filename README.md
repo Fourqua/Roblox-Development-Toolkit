@@ -72,8 +72,8 @@ roblox-development-toolkit/
 ## How to Use
 
 1. Browse the folders and find the system you need.
-2. Read its `README.md` — each one covers setup, the full API, and examples.
-3. Copy the `.lua` file into the correct Roblox Studio service (specified in each README).
+2. Read its `README.md`. Each one covers an overview, setup, examples, troubleshooting, and notes.
+3. Copy the `.lua` file into the correct Roblox Studio service.
 4. Adapt the code to fit your game.
 
 ---
