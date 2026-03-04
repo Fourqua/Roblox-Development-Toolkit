@@ -40,7 +40,9 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
 		local rootPart = character:FindFirstChild("HumanoidRootPart")
 		if rootPart then
 			rootPart.AssemblyLinearVelocity = Vector3.new(
+
 				rootPart.AssemblyLinearVelocity.X,
+                
 				CONFIG.DoubleJumpPower,
 				rootPart.AssemblyLinearVelocity.Z
 			)
