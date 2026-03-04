@@ -6,14 +6,14 @@ Lets the player jump a second time while in the air.
 
 ## Overview
 
-Tracks the player's `HumanoidState` to know when they're airborne. Once in freefall, a second space bar press applies an upward velocity to the `HumanoidRootPart` for the second jump. Landing or touching the ground resets the double jump so it's ready for next time.
+System racks the player's `HumanoidState` to know when they are airborne. Once in freefall mode, a second space bar press applies an upward velocity to the `Player` for the second jump. Landing or touching the ground resets the double jump.
 
 ---
 
 ## Setup
 
-1. Place `DoubleJump.lua` in `StarterCharacterScripts` as a `LocalScript`
-2. Adjust `CONFIG` at the top:
+1. Place `DoubleJump.lua` in the `StarterCharacterScripts` as a `LocalScript`.
+2. Adjust `CONFIG` at the top to your liking:
 
 ```lua
 local CONFIG = {
