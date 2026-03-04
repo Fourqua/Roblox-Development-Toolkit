@@ -24,6 +24,10 @@ roblox-development-toolkit/
 │   ├── README.md
 │   └── DayNightCycle.lua
 |
+├── DoubleJump/
+│   ├── README.md
+│   └── DoubleJump.lua
+|
 ├── FallDamageManager/
 │   ├── README.md
 │   └── FallDamageManager.lua
