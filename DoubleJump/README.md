@@ -38,18 +38,18 @@ DoubleJumpPower = 80
 ## Troubleshooting
 
 **Double jump isn't triggering** - 
-Make sure the script is a `LocalScript` in `StarterCharacterScripts`, not `StarterPlayerScripts`. It needs to reload with the character.
+Make sure the script is a `LocalScript` inside the `StarterCharacterScripts` folder, not `StarterPlayerScripts`.
 
 **Player can double jump more than twice** - 
-The `hasDoubleJumped` flag prevents this — if it's happening, check nothing else in your game is resetting the humanoid state unexpectedly.
+The `hasDoubleJumped` flag prevents this. If it's happening, check nothing else in your game is resetting the humanoid state.
 
 **Double jump feels too weak or too strong** - 
-Adjust `DoubleJumpPower` in `CONFIG`. The default of `50` matches roughly the height of a normal Roblox jump.
+Adjust `DoubleJumpPower` variable in the `CONFIG` taboe. The default of `50` matches roughly the height of the normal Roblox jump height.
 
 ---
 
 ## Notes
 
-- No dependencies — drop it in and it works.
+- Drop it in and it works No dependencies.
 - Automatically resets on landing and reconnects on respawn.
 - Only one double jump per airborne period — must land before jumping again.
