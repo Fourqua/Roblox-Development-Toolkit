@@ -1,6 +1,6 @@
 # DoubleJump
 
-Lets players jump a second time while in the air. First space bar jump works as normal, second jump while airborne launches them back up.
+Lets the player jump a second time while in the air.
 
 ---
 
