@@ -52,4 +52,4 @@ Adjust `DoubleJumpPower` variable in the `CONFIG` taboe. The default of `50` mat
 
 - Drop it in and it works No dependencies.
 - Automatically resets on landing and reconnects on respawn.
-- Only one double jump per airborne period — must land before jumping again.
+- Only one double jump per "set". Must land before jumping again.
