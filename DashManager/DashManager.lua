@@ -9,7 +9,7 @@ local camera    = workspace.CurrentCamera
 
 local CONFIG = {
 	DashPower    = 80,   -- How far/fast the dash launches the player
-	Cooldown     = 1,    -- Seconds before the player can dash again
+	Cooldown     = 1,    -- Amount of econds before the player can dash again
 	DashKey      = Enum.KeyCode.Q,
 }
 
