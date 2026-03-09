@@ -6,11 +6,11 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoid  = character:WaitForChild("Humanoid")
 local camera    = workspace.CurrentCamera
 
-
+-- CONFIG. Adjust these settings to your liking:
 local CONFIG = {
 	DashPower    = 80,   -- How far/fast the dash launches the player
 	Cooldown     = 1,    -- Amount of econds before the player can dash again
-	DashKey      = Enum.KeyCode.Q,
+	DashKey      = Enum.KeyCode.Q, -- Keybind for dashing
 }
 
 local onCooldown = false
