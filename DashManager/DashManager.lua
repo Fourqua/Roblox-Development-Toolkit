@@ -1,10 +1,3 @@
---[[
-	Dash.lua
-	Press Q to dash forward in the direction the player is moving.
-	Falls back to camera direction if the player is standing still.
-	Place in: StarterCharacterScripts as a LocalScript
---]]
-
 local UserInputService = game:GetService("UserInputService")
 local Players          = game:GetService("Players")
 
@@ -13,17 +6,12 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoid  = character:WaitForChild("Humanoid")
 local camera    = workspace.CurrentCamera
 
--- ============================================================
--- CONFIG
--- ============================================================
 
 local CONFIG = {
 	DashPower    = 80,   -- How far/fast the dash launches the player
 	Cooldown     = 1,    -- Seconds before the player can dash again
 	DashKey      = Enum.KeyCode.Q,
 }
-
--- ============================================================
 
 local onCooldown = false
 
@@ -36,17 +24,17 @@ local function dash()
 
 	onCooldown = true
 
-	-- Use move direction if moving, otherwise use camera look direction
+	-- Use move direction if moving
 	local direction = humanoid.MoveDirection
 	if direction.Magnitude < 0.1 then
 		direction = camera.CFrame.LookVector
 	end
 	direction = Vector3.new(direction.X, 0, direction.Z).Unit
 
-	-- Apply the dash velocity
+	-- Apply the dash
 	rootPart.AssemblyLinearVelocity = Vector3.new(
 		direction.X * CONFIG.DashPower,
-		rootPart.AssemblyLinearVelocity.Y, -- preserve vertical velocity
+		rootPart.AssemblyLinearVelocity.Y, 
 		direction.Z * CONFIG.DashPower
 	)
 
