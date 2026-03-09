@@ -44,19 +44,18 @@ DashKey = Enum.KeyCode.E
 
 ## Troubleshooting
 
-**Dash isn't firing**
-Make sure the script is a `LocalScript` in `StarterCharacterScripts`. Also check no other script is capturing Q input before this one (`gameProcessed` will be true if a UI element has focus).
+**Dash isn't firing** - 
+Make sure the script is a `LocalScript` in the `StarterCharacterScripts`. Also check no other script is capturing Q input before this one.
 
-**Dash goes the wrong direction**
+**Dash goes the wrong direction** - 
 The script uses `humanoid.MoveDirection` which follows WASD input. If you're not pressing a movement key it falls back to the camera's look direction.
 
-**Dash feels too short or too long**
-Increase or decrease `DashPower`. The right value depends on your game's walkspeed and map scale.
+**Dash feels too short or too long** - 
+Increase or decrease `DashPower`.
 
 ---
 
 ## Notes
 
-- No dependencies — drop it in and it works
+- Drop it in and it works
 - Vertical velocity is preserved so dashing while jumping or falling works naturally
-- Automatically reconnects on respawn
