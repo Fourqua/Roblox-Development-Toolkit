@@ -19,6 +19,10 @@ roblox-development-toolkit/
 ├── ChatTags/
 │   ├── README.md
 │   └── ChatTags.lua
+|
+├── DashManager/
+│   ├── README.md
+│   └── DashManager.lua
 │
 ├── DayNightCycle/
 │   ├── README.md
