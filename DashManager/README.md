@@ -12,7 +12,7 @@ On Q press (or any button), the script reads the player's current move direction
 
 ## Setup
 
-1. Place `Dash.lua` in `StarterCharacterScripts` as a `LocalScript`
+1. Place `DashManager.lua` in the `StarterCharacterScripts` as a `LocalScript`.
 2. Adjust `CONFIG` at the top:
 
 ```lua
@@ -28,11 +28,11 @@ local CONFIG = {
 ## Examples
 
 ```lua
--- Short snappy dash
+-- Short dash
 DashPower = 50
 Cooldown  = 0.5
 
--- Long aggressive dash
+-- Long dash
 DashPower = 140
 Cooldown  = 2
 
