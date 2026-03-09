@@ -1,12 +1,12 @@
 # Dash
 
-Press Q to dash in the direction you're moving. If you're standing still, dashes toward where the camera is looking.
+Press Q to dash in the direction you're moving.
 
 ---
 
 ## Overview
 
-On Q press, the script reads the player's current move direction and applies a burst of horizontal velocity to the `HumanoidRootPart`. Vertical velocity is preserved so dashing mid-air feels natural. A cooldown prevents spamming. Everything is tunable in `CONFIG`.
+On Q press (or any button), the script reads the player's current move direction and applies a burst of horizontal velocity to the `HumanoidRootPart`. A cooldown prevents spamming. Everything can be tweaked in `CONFIG`.
 
 ---
 
