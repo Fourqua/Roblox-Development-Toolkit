@@ -9,7 +9,7 @@ This fall damage system tracks the player's downward velocity on landing and app
 ---
 
 ## Setup
-1. Place the `FallDamageManager.lua` in the `ServerScriptService` as a `Script`
+1. Place the `FallDamageManager.lua` script in the `ServerScriptService` as a `Script`
 2. Configure `MinFallDistance` and `MaxFallDistance` in the `CONFIG` table to fit your game's preferences and likings.
 
 ---
